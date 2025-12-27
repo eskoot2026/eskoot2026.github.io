@@ -1,11 +1,146 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>My GitHub Pages Site</title>
-  </head>
-  <body>
-    <h1>Hello from GitHub Pages 👋</h1>
-    <p>If you can read this, it worked.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#231f20" />
+  <title>Eskoot — Road Hazard Detection</title>
+  <meta name="description" content="Eskoot provides real-time road hazard detection for e-scooters." />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">
+        <span class="logo"><img src="images/logotrans.png" alt="Description of the image" width="100" height="45"></span>
+        
+      </a>
+
+      <nav>
+        <a href="#about">About us</a>
+        <a href="#product">Product</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact Us</a>
+        
+      </nav>
+
+      
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="panel heroLeft">
+          <div class="tag">
+            <span class="dot"></span>
+            Real-time hazard detection
+          </div>
+
+          <h1>Safer rides,<br>smarter streets.</h1>
+          <p class="lead">
+            Hi. We're Eskoot, and our modules detect potholes, cracks, and road hazards in real time and alerts riders instantly. 
+          </p>
+
+          
+        </div>
+
+        <aside class="panel heroRight">
+          <video autoplay loop muted playsinline width="300" height="300" class="rounded-video">
+            <source src="videos\eskootspincut.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </aside>
+      </section>
+
+      <section id="features">
+        <h2>Features
+        </h2>
+        
+        <div class="cards">
+          <div class="card">
+            <h3>Hazard detection</h3>
+            <p>Potholes, cracks, and obstacles detected using edge AI.</p>
+          </div>
+          <div class="card">
+            <h3>Instant alerts</h3>
+            <p>Low-latency audio or haptic warnings.</p>
+          </div>
+          <div class="card">
+            <h3>Route analytics</h3>
+            <p>Identify danger hotspots and optimize routes.</p>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="tgridSection">
+        <h2>Testimonials</h2>
+
+        <div class="tgrid">
+          <!-- Top left -->
+          <article class="tcard">
+            <div class="tquoteMarks" aria-hidden="true">
+              <span class="open">“</span>
+              <span class="close">”</span>
+            </div>
+
+            <p class="tquote">
+              test test test test test test test test test test test test test test test test test test test test 
+            </p>
+
+            <div class="tauthor">
+              <span class="tname">Yongsang Yoo</span>
+              <span class="trole">Co-founder of South Korean tech company ipTIME</span>
+            </div>
+          </article>
+
+          <!-- Top right -->
+          <article class="tcard">
+            <div class="tquoteMarks" aria-hidden="true">
+              <span class="open">“</span>
+              <span class="close">”</span>
+            </div>
+
+            <p class="tquote">
+              test test test test test test test test test test test test test test test test test test test test 
+            </p>
+
+            <div class="tauthor">
+              <span class="tname">Yongsang Yoo</span>
+              <span class="trole">Co-founder of South Korean tech company ipTIME</span>
+            </div>
+          </article>
+
+          <!-- Bottom centered -->
+          <article class="tcard tcardWide">
+            <div class="tquoteMarks" aria-hidden="true">
+              <span class="open">“</span>
+              <span class="close">”</span>
+            </div>
+
+            <p class="tquote">
+              test test test test test test test test test test test test test test test test test test test test 
+            </p>
+
+            <div class="tauthor">
+              <span class="tname">Mr Singh</span>
+              <span class="trole">Head of Computer Science, NLCS Jeju</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+      
+    </main>
+
+    <footer>
+      © <span id="year"></span> Eskoot
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
