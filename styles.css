@@ -2,8 +2,8 @@
   --ink:#231f20;
   --accent:#9ccf6f;
   --bg:#0f0e0f;
-  --card:#171416;
-  --muted:rgba(255,255,255,.75);
+  --card:#313131;
+  --muted:rgb(255, 255, 255);
   --border:rgba(255,255,255,.12);
   --radius:20px;
   --shadow:0 20px 50px rgba(0,0,0,.6);
@@ -16,13 +16,14 @@
 }
 
 body{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Space Grotesk", Inter, sans-serif;
+
   background: linear-gradient(180deg,#0f0e0f,#070607);
   color:white;
 }
 
 .wrap{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
   padding:20px;
 }
@@ -49,13 +50,35 @@ header{
   
 }
 
-.rounded-video {
-  width: 400px;
-  height: auto;
-  border-radius: 20px;
+/* Make the right hero card behave like a full-bleed media card */
+.heroRight {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+
+  max-width: 420px;      /* ← controls how small the square is */
+  width: 100%;
+  aspect-ratio: 1 / 1;  /* square */
+
+  padding: 0;
   overflow: hidden;
-  pointer-events: none;
 }
+
+/* Full-bleed square frame */
+.videoFrame{
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;        /* keeps it square like your screenshot */
+}
+
+/* Video fills the frame */
+.heroVideo{
+  width: 100%;
+  height: 100%;
+  display: block;             /* removes inline-gap weirdness */
+  object-fit: cover;          /* fills without distortion */
+}
+
 video{
     pointer-events: none;
 }
@@ -91,12 +114,14 @@ nav a:hover{
   display:grid;
   grid-template-columns:1.2fr .8fr;
   gap:20px;
+  align-items: stretch; 
 }
 
+
 .panel{
-  background:rgba(255,255,255,.05);
+  background:#231f20;
   border-radius:var(--radius);
-  border:1px solid var(--border);
+  
   box-shadow:var(--shadow);
   padding:24px;
 }
@@ -121,12 +146,16 @@ nav a:hover{
 h1{
   font-size:58px;
   margin:16px 0;
+  color:var(--accent)
 }
 h2{
+    margin-top:0;
+  margin-bottom:16px;
     white-space: pre-wrap;
+    color: var(--accent);
 }
 .lead{
-  color:var(--muted);
+  color:white;
   margin-bottom:20px;
 }
 
@@ -194,9 +223,17 @@ h2{
 
 /* Sections */
 section{
-  margin-top:40px;
+  margin-top:24px;
 }
 
+h2{
+  margin-top:0;
+  margin-bottom:16px;
+}
+
+section h2 + .panel{
+  margin-top:12px;
+}
 .cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -204,10 +241,23 @@ section{
 }
 
 .card{
-  background:rgba(255,255,255,.05);
+  background:#231f20;
   padding:20px;
   border-radius:16px;
-  border:1px solid var(--border);
+  
+}
+
+.doublecards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.doublecard{
+  background:#231f20;
+  padding:20px;
+  border-radius:16px;
+  
 }
 
 /* Contact */
@@ -326,6 +376,63 @@ footer{
   font-size: 0.95rem;
 }
 
+/* ===== Team profile panel ===== */
+
+.teamPanel{
+  padding: 28px;
+}
+
+.teamRow{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Circular avatar */
+.teamAvatar{
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+}
+
+.teamAvatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text content */
+.teamContent{
+  max-width: 720px;
+}
+
+.teamName{
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.teamBio{
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 15.5px;
+}
+
+/* Mobile */
+@media (max-width: 720px){
+  .teamRow{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teamContent{
+    max-width: none;
+  }
+}
 
 @media (max-width: 820px) {
   .tgrid {
@@ -340,4 +447,120 @@ footer{
     padding: 1rem 1rem 1.25rem;
   }
 }
+/*-------------------------*/
+:root{
+      --bg: #0b0b0c;
+      --panel: rgba(255,255,255,0.05);
+      --border: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --green: #9ccf6f;
+    }
 
+    
+
+
+    /* ====== NAV (flat) ====== */
+    .nav{
+      height: 74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 0 36px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0,0,0,0.25);    /* subtle, not glowy */
+    }
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      user-select:none;
+    }
+    .burger{
+      width:18px; height:12px; position:relative;
+    }
+    .burger span{
+      position:absolute; left:0; right:0;
+      height:2px; border-radius:999px;
+      background: rgba(255,255,255,0.55);
+    }
+    .burger span:nth-child(1){ top:0; }
+    .burger span:nth-child(2){ top:5px; }
+    .burger span:nth-child(3){ bottom:0; }
+
+    
+
+    .nav-right a{
+      color: rgba(255,255,255,0.78);
+      text-decoration:none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+    .nav-right a:hover{ color:#fff; }
+
+ 
+  
+
+    /* Flat media card */
+    .photo-wrap{
+      width: min(640px, 92vw);
+      margin: 0 auto 26px;
+      border-radius: 20px;
+      overflow:hidden;
+      border: 1px solid var(--border);
+      background: var(--panel);        /* no glow */
+    }
+    .photo-wrap img{
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    .headline{
+      font-size: 1.22rem;
+      font-weight: 650;
+      color: rgba(255,255,255,0.86);
+      margin: 10px auto 18px;
+      max-width: 850px;
+    }
+
+   
+    /* Optional: flat info row */
+    .facts{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 34px auto 0;
+      max-width: 920px;
+      text-align:left;
+    }
+    .fact{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);  /* flat */
+      border-radius: 16px;
+      padding: 16px 16px;
+    }
+    .fact strong{
+      display:block;
+      margin-bottom: 6px;
+      color: rgba(255,255,255,0.88);
+      font-weight: 650;
+    }
+    .fact span{
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer{
+      margin-top: 70px;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.85rem;
+    }
+
+    /* Mobile: hide right links, keep burger */
+    @media (max-width: 720px){
+      .nav-right{ display:none; }
+      main{ padding-top: 30px; }
+    }

@@ -4,8 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#231f20" />
-  <title>Eskoot — Road Hazard Detection</title>
+  <title>Eskoot</title>
   <meta name="description" content="Eskoot provides real-time road hazard detection for e-scooters." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
@@ -20,8 +23,9 @@
       </a>
 
       <nav>
-        <a href="#about">About us</a>
-        <a href="#product">Product</a>
+        <a href ="./index.html">Home</a>
+        <a href="./about.html">About us</a>
+        <a href="#product">Our product</a>
         <a href="#how">How it works</a>
         <a href="#contact">Contact Us</a>
         
@@ -46,33 +50,16 @@
           
         </div>
 
-        <aside class="panel heroRight">
-          <video autoplay loop muted playsinline width="300" height="300" class="rounded-video">
-            <source src="videos\eskootspincut.webm" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-        </aside>
+          <aside class="panel heroRight">
+            <div class="videoFrame">
+              <video class="heroVideo" autoplay loop muted playsinline preload="auto">
+                <source src="videos/eskootspincut.webm" type="video/webm">
+              </video>
+            </div>
+          </aside>
       </section>
 
-      <section id="features">
-        <h2>Features
-        </h2>
-        
-        <div class="cards">
-          <div class="card">
-            <h3>Hazard detection</h3>
-            <p>Potholes, cracks, and obstacles detected using edge AI.</p>
-          </div>
-          <div class="card">
-            <h3>Instant alerts</h3>
-            <p>Low-latency audio or haptic warnings.</p>
-          </div>
-          <div class="card">
-            <h3>Route analytics</h3>
-            <p>Identify danger hotspots and optimize routes.</p>
-          </div>
-        </div>
-      </section>
+      
       <section id="testimonials" class="tgridSection">
         <h2>Testimonials</h2>
 

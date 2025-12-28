@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — Eskoot</title>
+
+  <!-- Optional: reuse your main stylesheet instead -->
+  <style>
+    :root {
+      --green: #9ccf6f;
+      --dark: #231f20;
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.12);
+      --text-muted: rgba(255,255,255,0.75);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #2a2a2a 0%, #000 70%);
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 56px;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 0.02em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    .card {
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.03)
+      );
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 40px;
+    }
+
+    /* ---------- HERO ---------- */
+    .badge {
+      display: inline-block;
+      background: rgba(156, 207, 111, 0.15);
+      color: var(--green);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+
+    p.lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    /* ---------- GRID ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 32px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    /* ---------- VALUES ---------- */
+    .value {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">eskööt</div>
+    <div>
+      <a href="about.html">About us</a>
+      <a href="#">Our Product</a>
+      <a href="#">How it works</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="card">
+      <span class="badge">About Eskoot</span>
+      <h1>Building safer streets<br>for everyday riders.</h1>
+      <p class="lead">
+        Eskoot is an edge-AI safety platform designed to protect micromobility riders.
+        Our hardware modules detect road hazards like potholes, cracks, and obstacles
+        in real time—alerting riders before danger becomes an accident.
+      </p>
+    </section>
+
+    <!-- MISSION -->
+    <section>
+      <div class="grid">
+        <div class="card">
+          <h2>Our Mission</h2>
+          <p class="value">
+            We believe micromobility should be safe by default. Eskoot exists to reduce
+            preventable accidents by bringing real-time intelligence directly onto
+            e-scooters and bikes—without relying on cloud latency or user attention.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Why We Built Eskoot</h2>
+          <p class="value">
+            Potholes and road defects are one of the leading causes of micromobility
+            injuries. Existing solutions react too late. Eskoot predicts danger ahead
+            of time using on-device vision and low-latency alerts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section>
+      <h2>What We Value</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Safety First</h3>
+          <p class="value">
+            Every design decision is driven by rider safety, reliability, and trust.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Edge Intelligence</h3>
+          <p class="value">
+            Real-time decisions happen on the device—no delays, no dependency on
+            connectivity.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Scalability</h3>
+          <p class="value">
+            Built for mass deployment across fleets, cities, and diverse road
+            environments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="card">
+      <h2>Our Vision</h2>
+      <p class="value">
+        We envision cities where micromobility is as safe and trusted as public transit.
+        By turning every ride into a data-informed experience, Eskoot helps riders,
+        operators, and cities identify risk and build smarter infrastructure.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Eskoot. Safer rides, smarter streets.
+  </footer>
+
+</body>
+</html>
