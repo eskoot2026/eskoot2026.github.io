@@ -640,3 +640,69 @@ footer{
       .nav-right{ display:none; }
       main{ padding-top: 30px; }
     }
+.contactSection{
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactSection h1{
+  font-size: 42px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.contactLead{
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.contactGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.contactCard{
+  background: #231f20;
+  border-radius: 18px;
+  padding: 28px 20px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid var(--border);
+  transition: transform 0.25s ease, border-color 0.25s ease-in-out;
+}
+
+.contactCard:hover{
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.contactIcon{
+  display: block;
+  margin: 0 auto 12px auto;
+  width: 60px;
+  height: 60px;
+  opacity: 0.9;
+}
+
+.contactCard strong{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+.contactCard span{
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Mobile */
+@media (max-width: 800px){
+  .contactGrid{
+    grid-template-columns: 1fr;
+  }
+}
