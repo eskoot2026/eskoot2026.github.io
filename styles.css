@@ -83,6 +83,14 @@ header{
   object-position: center;
   border-radius: inherit;  /* matches panel rounding */
 }
+.panelImage2{
+  width: 100%;
+  height: 100%;
+  display: block;          /* removes inline gap */
+  object-fit: cover;       /* fills panel without stretching */
+  object-position: center;
+  border-radius: inherit;  /* matches panel rounding */
+}
 /* Full-bleed square frame */
 .videoFrame{
   width: 100%;
@@ -234,7 +242,14 @@ h2{
   font-size:22px;
   font-weight:700;
 }
-
+h3{
+  margin-top:0;
+  margin-bottom:8px;
+  color: #9ccf6f;
+}
+.h3new{
+  color:#fff;
+}
 .bar{
   height:8px;
   background:rgba(255,255,255,.15);
@@ -278,11 +293,26 @@ section h2 + .panel{
 .diagramPanel{
   padding: 16px;
 }
+.media.diagram{
+  min-height: 330px;        /* smaller than 340 */
+  height: 260px;
+}
 
+.media.diagram img{
+  object-fit: contain;      /* key fix */
+  width: 100%;
+  height: 100%;
+  padding: 14px;            /* adds breathing room */
+  background: #231f20;      /* keeps panel consistent */
+}
 .diagramPanel img{
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.marketMedia{
+  height: 320px;
+  min-height: 420px;
 }
 .phonePanel{
   display: flex;
@@ -703,6 +733,66 @@ footer{
 /* Mobile */
 @media (max-width: 800px){
   .contactGrid{
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== Mission section (no icons) ===== */
+.missionPanel{
+  padding: 28px;
+}
+
+.missionGrid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.missionItem{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.missionItem h3{
+  margin: 0 0 8px;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.missionItem p{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 14.5px;
+}
+.inviDivider{
+  height: 1px;
+  
+  margin: 13px 0;
+}
+.missionDivider{
+  height: 1px;
+  background: var(--border);
+  margin: 26px 0;
+}
+
+.visionBlock h3{
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.visionBlock p{
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .missionGrid{
     grid-template-columns: 1fr;
   }
 }
