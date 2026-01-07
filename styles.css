@@ -183,7 +183,11 @@ h2{
   color:white;
   margin-bottom:20px;
 }
-
+.intro-lead{
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+}
 .heroActions{
   display:flex;
   gap:12px;
@@ -327,7 +331,7 @@ section h2 + .panel{
 
 .doublecard{
   background:#231f20;
-  padding:20px;
+  padding:0px;
   border-radius:16px;
   
 }
@@ -463,9 +467,9 @@ footer{
 /* Circular avatar */
 .teamAvatar{
   flex-shrink: 0;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  border-radius: 10%;
   overflow: hidden;
   border: 3px solid var(--accent);
 }
